@@ -62,10 +62,16 @@ function toggleModal(){
     if(isModalOpen){
         isModalOpen = false;
         return document.body.classList.remove("modal--open");
+        scrollTo
     }
     isModalOpen = true;
 
     
     document.body.classList += " modal--open";
     
+}
+
+function topFunction(){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }

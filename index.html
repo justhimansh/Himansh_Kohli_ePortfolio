@@ -21,7 +21,7 @@
     <section id="landing-page" onmousemove="moveBackground(event)">
         <nav>
             <figure>
-                <img id="personal-logo" src="./assets/logo.svg" alt="">
+                <img id="personal-logo" src="./assets/HKLOGO.png" alt="">
             </figure>
             <ul class="nav__link--list">
                 <li class="nav__link" onclick="toggleModal()">
@@ -56,13 +56,14 @@
         </nav>
         <header class="header">
             <div class="header__content">
-                <h1 class="title">Hey</h1>
+                <h1 class="title darkRed">Hey</h1>
                 <h1 class="title orange">I'm Himansh.</h1>
                 <p class="header__para">
-                    I'm a <b class="orange">Software Engineer </b>with a strong passion for building applications with
+                    I'm a <b class="orange">Software Developer </b>with a strong passion for building applications with
                     great user experiences.
                     <br>
-                    Here's a bit more <b class="orange click" onclick="toggleModal()">about me</b>.
+                    Here's a bit more <b class="orange click link__hover-effect
+                    link__hover-effect--black" onclick="toggleModal()">about me</b>.
                 </p>
                 <div class="social__list">
                     <a href="" class="social__link click">
@@ -78,8 +79,10 @@
             </div>
         </header>
         
-            <button class="mail__btn click" onclick="toggleModal()">
+        
+            <button id="alsoScroll" class="mail__btn click" onclick="toggleModal(); topFunction()">
                 <i class="fas fa-envelope"></i>
+                
             </button>
         
         <a href="#projects" class="scroll">
@@ -92,13 +95,10 @@
                 <h3 class="modal__title modal__title--about">Here's a bit about me</h3>
                 <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
                 <p class="modal__para">
-                    I'm a 19 year-old <b class="orange">frontend software engineer</b> with a strong passion for
-                    developing websites with
-                    great <b class="orange">user experiences</b>.
+                    I'm a 19 year-old <b class="orange">computer science</b>  undergraduate at the Auckland University of Technology. Majoring in Cyber Security and minoring in Artifical Intelligence. Along with a strong passion for
+                    fontend engineering and software development.
                     <br>
-                    I currently work on extremely difficult enginerring problems and learn from a team consisting of
-                    some of the most <b class="orange">talented</b> and <b class="orange">experienced</b> software
-                    engineers everyday
+                    I am currently studying my second year of my degree and am looking for opporunities to help boost my career in the <b class="orange">IT Industry</b>. Here are some of the areas im quite familiar with. 
                 </p>
                 <div class="modal__languages">
                     <figure class="modal__language">
@@ -109,21 +109,21 @@
                     </figure>
                     <figure class="modal__language">
                         <img class="modal__language--img"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Devicon-html5-plain.svg/512px-Devicon-html5-plain.svg.png"
+                            src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg"
                             alt="">
-                        <span class="languages__name">HTML</span>
+                        <span class="languages__name">CSS</span>
                     </figure>
                     <figure class="modal__language">
                         <img class="modal__language--img"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Devicon-html5-plain.svg/512px-Devicon-html5-plain.svg.png"
+                            src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Javascript_Logo.png"
                             alt="">
-                        <span class="languages__name">HTML</span>
+                        <span class="languages__name">JavaScript</span>
                     </figure>
                     <figure class="modal__language">
                         <img class="modal__language--img"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Devicon-html5-plain.svg/512px-Devicon-html5-plain.svg.png"
+                            src="https://upload.wikimedia.org/wikipedia/commons/4/47/React.svg"
                             alt="">
-                        <span class="languages__name">HTML</span>
+                        <span class="languages__name">React</span>
                     </figure>
                 </div>
             </div>
@@ -181,30 +181,27 @@
                 <ul class="project__list">
                     <li class="project">
                         <div class="project__wrapper">
-                            <img src="./assets/blinker mockup.png" class="project__img" alt="">
+                            <img src="./assets/modernLibraryv1.jpg" class="project__img" alt="">
                             <div class="project__wrapper--bg">
 
                             </div>
 
                             <div class="project__description">
                                 <h3 class="project__description--title">
-                                    Car Sales Projects
+                                    Modern Library Project
                                 </h3>
                                 <h4 class="project__description--sub-title">
-                                    Html, CSS, JavaScript, Vue, Vuex
+                                    Html, CSS
                                 </h4>
                                 <p class="project__description--para">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero esse dolor ea
-                                    repellat voluptatem illum a sunt facilis atque, at quam maxime corporis voluptatibus
-                                    necessitatibus alias reprehenderit, odio odit nesciunt.
+                                    Modern online library using HTML and CSS elements to provide an aesthetically pleasing
+                                    and user friendly graphical interface. Fully responsive to phones, laptop and computers.
                                 </p>
                                 <div class="project__description--links">
-                                    <a href="#" class="project__description-link">
+                                    <a href="https://justhimansh.github.io/ModernLibraryv1/" target="_blank" class="project__description-link">
                                         <i class="fab fa-github"></i>
                                     </a>
-                                    <a href="#" class="project__description-link">
-                                        <i class="fas fa-link"></i>
-                                    </a>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -277,7 +274,7 @@
         <div class="container">
             <div class="row footer__row">
                 <figure>
-                    <img class="footer__logo--img" src="./assets/logo.svg" alt="">
+                    <img class="footer__logo--img" src="./assets/HKLOGO.png" alt="">
                 </figure>
                 <div class="footer__social--list">
                     <a href="#" class="footer__social--link
