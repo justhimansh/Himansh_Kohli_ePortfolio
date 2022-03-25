@@ -109,6 +109,12 @@ input:focus, textarea:focus{
     width: 100%;
 }
 
+
+.link__hover-effect-icon:after{
+    background-color: white;
+}
+
+
 nav,
 .scroll,
 .header{
