@@ -520,6 +520,7 @@ nav{
 .project__img{
     width: 100%;
     transition: all 600ms ease;
+    
 }
 
 .project__wrapper{
