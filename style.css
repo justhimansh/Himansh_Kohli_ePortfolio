@@ -728,6 +728,9 @@ footer{
         width: 100%;
 
     }
+    .slider__font{
+        color: red;
+    }
 }
 
 @media (max-width: 480px){
