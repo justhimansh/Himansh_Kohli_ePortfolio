@@ -731,6 +731,9 @@ footer{
     .slider__font{
         color: red;
     }
+    figcaption{
+        color: red;
+    }
 }
 
 @media (max-width: 480px){
@@ -757,5 +760,8 @@ footer{
     }
     .modal__half{
         padding: 40px;
+    }
+    figcaption{
+        color: red;
     }
 }
