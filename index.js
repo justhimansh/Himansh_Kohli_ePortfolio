@@ -96,14 +96,14 @@ function contact(event) {
     loading.classList += " modal__overlay--visible";
     
     emailjs.sendForm(
-        'service_4d0pocs',
+        'service_biu2uwd',
         'template_pg4uwav',
         event.target,
         'user_AcR1Hy6RbvMfEEoijcIOp'
     ).then(() => {
         loading.classList.remove("modal__overlay--visible")
         success.classList += " modal__overlay--visible";
-        console.log('lets goooo')
+        console.log('FINALLY')
     }).catch(() => {
         loading.classList.remove("modal__overlay--visible");
         alert("The email service is currently unavailable. Please contact me directly. Thanks :)")
