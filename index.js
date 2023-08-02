@@ -2,6 +2,31 @@
 // service_4d0pocs
 // user_AcR1Hy6RbvMfEEoijcIOp
 
+document.addEventListener('DOMContentLoaded', function() {
+  // Get the visitor's IP address using a free IP API service
+  fetch('https://api.ipify.org?format=json')
+      .then(response => response.json())
+      .then(data => {
+          const visitorIp = data.ip;
+          const visitorUserAgent = navigator.userAgent;
+          const timestamp = new Date().toISOString();
+
+          // Create a mailto link with the visitor's information
+          const emailSubject = encodeURIComponent('New website visitor notification');
+          const emailBody = encodeURIComponent(`A new visitor accessed your website.\n\nIP Address: ${visitorIp}\nUser Agent: ${visitorUserAgent}\nTimestamp: ${timestamp}`);
+          const emailLink = `mailto:justhimanshk@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+
+          // Create a link or button that triggers the email
+          const emailButton = document.createElement('a');
+          emailButton.href = emailLink;
+          emailButton.textContent = 'Notify Me';
+          document.body.appendChild(emailButton);
+      })
+      .catch(error => {
+          console.error('Error getting visitor information:', error);
+      });
+});
+
 var responsiveSlider = function() {
 
     var slider = document.getElementById("slider");
@@ -160,3 +185,4 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
