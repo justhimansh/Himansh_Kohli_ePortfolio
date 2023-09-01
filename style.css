@@ -83,6 +83,7 @@ input:focus, textarea:focus{
     color: rgb(204, 24, 0);
 }
 
+
 .link__hover-effect{
     position: relative;
 }
@@ -97,7 +98,22 @@ input:focus, textarea:focus{
     transition: all 300ms ease;
 }
 
+h2{
+  border-right: 0.15em solid orange;
+  animation: blink 0.75s step-end infinite;
+  width: max-content;
+}
 
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
 
 .link__hover-effect--white:after{
     background-color: white;

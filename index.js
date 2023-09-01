@@ -2,30 +2,67 @@
 // service_4d0pocs
 // user_AcR1Hy6RbvMfEEoijcIOp
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Get the visitor's IP address using a free IP API service
-  fetch('https://api.ipify.org?format=json')
-      .then(response => response.json())
-      .then(data => {
-          const visitorIp = data.ip;
-          const visitorUserAgent = navigator.userAgent;
-          const timestamp = new Date().toISOString();
+const phrases = ["full stack developer", "cyber security analyst"];
+let phraseIndex = 0;
+const txtArr = phrases[phraseIndex].split("");
 
-          // Create a mailto link with the visitor's information
-          const emailSubject = encodeURIComponent('New website visitor notification');
-          const emailBody = encodeURIComponent(`A new visitor accessed your website.\n\nIP Address: ${visitorIp}\nUser Agent: ${visitorUserAgent}\nTimestamp: ${timestamp}`);
-          const emailLink = `mailto:justhimanshk@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+function getRandomTime() {
+  return 0.1;
+}
 
-          // Create a link or button that triggers the email
-          const emailButton = document.createElement('a');
-          emailButton.href = emailLink;
-          emailButton.textContent = 'Notify Me';
-          document.body.appendChild(emailButton);
-      })
-      .catch(error => {
-          console.error('Error getting visitor information:', error);
-      });
-});
+function getEle(id) {
+  return document.getElementById("text");
+}
+
+function ModifyTxt(el, txt) {
+  return (el.innerHTML = txt);
+}
+
+function writeOut(txtArr, curChar = 0) {
+  const randomTime = getRandomTime();
+  setTimeout(() => {
+    const el = getEle("text");
+    let elTxt = el.innerHTML;
+    elTxt += txtArr[curChar];
+    ModifyTxt(el, elTxt);
+    // Check if next iteration is out of range
+    if (curChar + 1 == txtArr.length) {
+      // Wait for 3 seconds before starting to delete
+      setTimeout(() => {
+        return deleteOut(txtArr, txtArr.length);
+      }, 1500);
+    } else {
+      return writeOut(txtArr, curChar + 1);
+    }
+  }, randomTime * 1000);
+}
+
+function deleteOut(txtArr, curChar = 0) {
+  const randomTime = getRandomTime();
+  setTimeout(() => {
+    const el = getEle("text");
+    let elTxt = el.innerHTML;
+    // Remove
+    const elTxtArr = elTxt.split("");
+    const elTxtArrLen = elTxtArr.length;
+    console.log(elTxtArr.length - 1);
+    const newElTxt = elTxtArr.splice(0, curChar - 1).join("");
+    ModifyTxt(el, newElTxt);
+    if (elTxtArrLen == 0) {
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      txtArr = phrases[phraseIndex].split("");
+      setTimeout(() => {
+        return writeOut(txtArr, 0);
+      }, 1500);
+    } else {
+      return deleteOut(txtArr, elTxtArrLen - 1);
+    }
+  }, randomTime * 1000);
+}
+
+writeOut(txtArr);
+
+
 
 var responsiveSlider = function() {
 
@@ -121,8 +158,8 @@ function contact(event) {
     loading.classList += " modal__overlay--visible";
     
     emailjs.sendForm(
-        'service_biu2uwd',
-        'template_pg4uwav',
+        'service_gr3kkf3',
+        'template_u9lhm8n',
         event.target,
         'user_AcR1Hy6RbvMfEEoijcIOp'
     ).then(() => {
@@ -185,4 +222,5 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
 
