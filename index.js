@@ -2,7 +2,7 @@
 // service_4d0pocs
 // user_AcR1Hy6RbvMfEEoijcIOp
 
-const phrases = ["full stack developer", "cyber security analyst"];
+const phrases = ["cyber security analyst", "full stack developer"];
 let phraseIndex = 0;
 const txtArr = phrases[phraseIndex].split("");
 
